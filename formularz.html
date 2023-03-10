@@ -1,0 +1,57 @@
+<HTML>
+<link rel="stylesheet" type="text/css" href="formularz.css" />
+<meta charset="UTF-8">
+<body>
+<p text-align=left><a href="Index.html">Powrót</a></p>
+<form>
+ <label for="imie">Imię:</label>
+  <input type="text" id="imie" name="imie"><br>
+  <label for="Nazwisko">Nazwisko:</label>
+  <input type="text" id="Nazwisko" name="Nazwisko"><br>
+  <label for="Ulica">Ulica:</label>
+  <input type="text" id="Ulica" name="Ulica"><br>
+  <label for="nrdom">Numer domu:</label>
+  <input type="number" id="nrdom" name="nrdom"><br>
+  <label for="nrmiesk">Numer mieszkania:</label>
+  <input type="number" id="nrmiesk" name="nrmiesk"><br>
+  <label for="miasto">Miasto:</label>
+  <input type="text" id="miasto" name="miasto"><br>
+  <label for="plec">Płeć:</label>
+  <input type="radio" id="men" name="plec" value="men">
+  <label for="html">Mężczyzna</label>
+  <input type="radio" id="kob" name="plec" value="kob">
+  <label for="css">Kobieta</label><br>
+  <label for="prawko">Czy posiadasz prawo jazdy?</label>
+  <input type="checkbox" id="prawko" name="prawko" value="prawko">
+  <label for="prawko"> Tak, posiadam</label><br>
+	<label for="wojewodztwo">Wybierz swoje województwo:</label>
+  <select name="wojewodztwo" id="wojewodztwo">
+    <option value="dolnoslaskie">dolnośląskie</option>
+    <option value="kujawskopomorskie">kujawsko-pomorskie</option>
+    <option value="lubelskie">lubelskie</option>
+    <option value="łodzkie">łódzkie</option>
+	<option value="malopolskie">małopolskie</option>
+	<option value="mazowieckie">mazowieckie</option>
+	<option value="opolskie">opolskie</option>
+	<option value="podkarpackie">podkarpackie</option>
+	<option value="podlaskie">podlaskie</option>
+	<option value="slaskie">śląskie</option>
+	<option value="swietokrzyskie">świetokrzyskie</option>
+	<option value="warminskomazurskie">warmińsko-mazurskie</option>
+	<option value="wielkopolskie">wielkopolskie</option>
+	<option value="zachodniopomorskie">zachodniopomorskie</option>
+  </select>
+  <br>
+  <label for="uwagi">Uwagi:</label>
+  <input type="text" id="uwagi" name="uwagi"><br>
+   <label for="dataur">Data urodzenia:</label>
+  <input type="date" id="dataur" name="dataur"><br>
+   <label for="telefon">Numer telefonu:</label>
+  <input type="number" id="telefon" name="telefon"><br>
+  <label for="pesel">Pesel:</label>
+  <input type="number" id="pesel" pattern="[0-9]{11}" name="pesel"><br>
+  <label for="kod">Kod pocztowy:</label>
+  <input type="number" id="kod" pattern="[0-9]{5}"  name="kod"><br>
+</form>
+</body>
+</HTML>
