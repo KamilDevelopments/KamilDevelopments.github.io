@@ -1,6 +1,6 @@
 input[type=text] {
 	margin: 0 auto;
-	width: 20%;
+	width: 50%;
 	border: 1px solid;
 }
 input {
@@ -10,7 +10,6 @@ input {
 }
 #main{
 	margin: 0 auto;
-	background-color:red;
 	width:100%;
 	display:flex;
 	flex-direction:column;
