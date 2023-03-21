@@ -17,3 +17,6 @@ input {
 	padding-left:10px;
 	
 }
+form{
+border: 2px solid black;
+}
