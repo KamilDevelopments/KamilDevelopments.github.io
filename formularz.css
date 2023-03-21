@@ -1,22 +1,24 @@
 input[type=text] {
-	margin: 0 auto;
-	width: 50%;
+	
 	border: 1px solid;
 }
 input {
+	margin-top:3px;
+	margin-bottom:3px;
 	display:inline-block;
-	padding: 10px 10px;
+	padding: 5px 5px;
+	
 
 }
 #main{
 	margin: 0 auto;
-	width:100%;
-	display:flex;
-	flex-direction:column;
-	align-items: center; 
+	width:30%;	
 	padding-left:10px;
-	
+	display: table;
+    text-align: right;
 }
 form{
-border: 2px solid black;
+	border: 2px solid black;
+	padding:10px;
+	
 }
