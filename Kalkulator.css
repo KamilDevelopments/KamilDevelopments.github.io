@@ -1,0 +1,36 @@
+body{
+		background-color:#c5d5fa;
+
+}
+#main{
+	background-color:white;
+	border: solid 1px black ;
+	margin: 0 auto;
+width:25%;
+height:60%;
+border: 1px solid;
+}
+#btnDel{
+	width:75%;
+}
+#btnSum{
+	width:50%;
+}
+button{
+	 font-size: 30px;
+	 text-align: center;
+	 width:25%;
+	 height:16%;
+	 float:left;
+	 background-color:#ADD8E6;
+	
+}
+#ans{
+	font-size: 30px;
+width:100%;
+float:left;
+height:20%;
+}
+#ansp{
+text-align:right;
+}
