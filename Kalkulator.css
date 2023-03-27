@@ -26,6 +26,7 @@ button{
 	
 }
 #ans{
+	overflow:hidden;
 	font-size: 30px;
 width:100%;
 float:left;
