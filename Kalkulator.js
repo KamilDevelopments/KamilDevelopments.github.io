@@ -1,5 +1,6 @@
 let text = "";
 let isDot = false;
+let resetCalc = false;
 //get Buttons from html
 let ansp = document.getElementById("ansp");
 let btn1 = document.getElementById("btn1");
@@ -43,6 +44,12 @@ btnSum.addEventListener("click", sum);
 function addText(event) {
   var letter = event.target.innerHTML;
   var prevLetter = text.charAt(text.length - 1);
+  if(resetCalc == true && letter != "+" && letter != "-" && letter != "*" && letter != "/"){
+	  text = ""
+	  resetCalc = false;
+  }else{
+	  resetCalc = false;
+  }
    if (letter == "." && prevLetter == "."||((letter == "+" || letter == "-" || letter == "*"||letter == "/")&&(prevLetter == "+" || prevLetter == "-" || prevLetter == "*"||prevLetter == "/"))) {
 	return;
   }
@@ -68,6 +75,10 @@ if(letter == "+" || letter == "-" || letter == "*" || letter == "/"){
 }
 //add delete text from string
 function deleteText() {
+	var prevLetter = text.charAt(text.length - 1);
+	if(prevLetter ="."){
+		isDot = false;
+	}
   text = text.slice(0, text.length-1);
   ansp.innerHTML = text;
 }
@@ -82,6 +93,7 @@ function sum() {
   result = Math.round(result*100)/100;
   ansp.innerHTML = result;
   text = result.toString();
+  resetCalc = true;
   if(text.includes(".")){
 	 isDot = true;   
   }else{
