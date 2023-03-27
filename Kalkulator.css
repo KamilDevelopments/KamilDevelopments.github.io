@@ -19,7 +19,7 @@ border: 1px solid;
 button{
 	 font-size: 30px;
 	 text-align: center;
-	 width:30%;
+	 width:25%;
 	 height:16%;
 	 float:left;
 	 background-color:#ADD8E6;
@@ -33,10 +33,4 @@ height:20%;
 }
 #ansp{
 text-align:right;
-}
-@media screen and (max-width: 600px) {
-   #main{
-width:100%;
-
-}
 }
