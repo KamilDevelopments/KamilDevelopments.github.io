@@ -69,7 +69,8 @@ var kod = document.getElementById("kod").value.trim();
         errorReg = true;
     }
     if((new Date(dataur)).getFullYear()>2100||isNaN((new Date(dataur).getFullYear()))){
-        text += "data, ";  
+        text += "data, "; 
+      errorReg = true; 
     }
     if (errorReg) {
         errorReg = false
