@@ -16,20 +16,29 @@ var telefon = document.getElementById("telefon").value.trim();
 var pesel = document.getElementById("pesel").value.trim();
 var kod = document.getElementById("kod").value.trim();
   let text = "W formularzy wystąpił błąd w :";
-    var imieMiastoReg = /^[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ\s-]{2,50}$/;
-    var ulicaReg = /^[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ\s-]{2,30}\s\d{1,4}[a-zA-Z]{0,1}$/;
-    var numerDomuReg = /^[0-9]{1,4}[a-zA-Z]{0,1}$/;
+  var imieReg = /^([a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ]{2,50})$/;
+    var nazwiskoMiastoReg = /^([a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ]{2,50})(([\s-]([a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ]{2,50}))?)$/;
+    var ulicaReg = /^[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ\s-]{2,30}$/;
+    var numerDomuReg = /^[0-9]{1,3}[a-zA-Z]{0,1}$/;
+    var numerMieszkReg = /^([0-9]{1,3}[a-zA-Z]{0,1}?)?$/;
     var peselReg = /^[0-9]{11}$/;
     var kodPocztowyReg = /^[0-9]{2}-[0-9]{3}$/;
-    var telefonReg = /^([0-9]{3}[\s-]?){3}$/;
+    var telefonReg = /^([0-9]{9})$/;
+
 
     var errorReg = false;
-    if (!imie.match(imieMiastoReg)) {
+    if (!imie.match(imieReg)) {
     text += "imie, ";
   }
-  //if (!nazwisko.match(nameRegex)) {
-  // text+="nazwisko, ";
-  //}
+  if (nazwisko.includes("-")) {
+    if (!nazwisko.match(nazwiskoMiastoReg)) {
+        text += "nazwisko, ";
+      }
+  }else{
+    if (!nazwisko.match(imieReg)) {
+        text += "nazwisko, ";
+      }
+  }
     
     if (!ulica.match(ulicaReg)) {
         text += "ulica, ";
@@ -39,11 +48,11 @@ var kod = document.getElementById("kod").value.trim();
         text += "numer domu, ";
         errorReg = true;
     }
-    if (!nrmiesk.match(numerDomuReg)) {
+    if (!nrmiesk.match(numerMieszkReg)) {
         text += "numer mieszkania, ";
         errorReg = true;
     }
-    if (!miasto.match(imieMiastoReg)) {
+    if (!miasto.match(nazwiskoMiastoReg)) {
         text += "miasto, ";
         errorReg = true;
     }
@@ -59,14 +68,17 @@ var kod = document.getElementById("kod").value.trim();
         text += "kod Pocztowy(XX-XXX), ";
         errorReg = true;
     }
+    if((new Date(dataur)).getFullYear()>2100||isNaN((new Date(dataur).getFullYear()))){
+        text += "data, ";  
+    }
     if (errorReg) {
         errorReg = false
     } else {
         document.getElementById("formularz").submit();
     }
-   
-  
-  
+if(text.charAt(text.length-2) == ","){
+    text = text.slice(0,text.length-2);
+}
 ansp.innerHTML = text;
     text = "";
 }

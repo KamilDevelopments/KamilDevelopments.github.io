@@ -10,8 +10,11 @@ input {
 	
 
 }
+#main>* {
+    margin: auto;
+}
 #main{
-	margin: 0 auto;
+	margin: auto;
 	width: 30%;	
 	padding-left:10px;
 	display: table;
