@@ -1,3 +1,4 @@
+<<<<<<<< HEAD:formularz.txt
 <HTML>
   <head>
 <link rel="stylesheet" type="text/css" href="formularz.css" />
@@ -72,4 +73,68 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 
 </body>
 <script src="formularz.js"></script>
+========
+<HTML>
+<link rel="stylesheet" type="text/css" href="formularz.css" />
+<meta charset="UTF-8">
+<body>
+<p text-align=left><a href="https://kamildevelopments.github.io/">Powrót</a></p>
+<div id="main">
+<form id="formularz">
+ <label for="imie">Imię:</label>
+  <input type="text" id="imie" name="imie" onKeyPress="if(this.value.length==50) return false;" required><br>
+  <label for="Nazwisko">Nazwisko:</label>
+  <input type="text" id="Nazwisko" name="Nazwisko" onKeyPress="if(this.value.length==50) return false;" required><br>
+  <label for="Ulica">Ulica:</label>
+  <input type="text" id="Ulica" name="Ulica" onKeyPress="if(this.value.length==50) return false;" required><br>
+  <label for="nrdom">Numer domu:</label>
+  <input type="number" id="nrdom" name="nrdom" onKeyPress="if(this.value.length==50) return false;" required><br>
+  <label for="nrmiesk">Numer mieszkania:</label>
+  <input type="number" id="nrmiesk" name="nrmiesk" onKeyPress="if(this.value.length==50) return false;" required><br>
+  <label for="miasto">Miasto:</label>
+  <input type="text" id="miasto" name="miasto" onKeyPress="if(this.value.length==50) return false;" required><br>
+  <label for="plec">Płeć:</label>
+  <input type="radio" id="men" name="plec" value="men" checked = true>
+  <label for="html">Mężczyzna</label>
+  <input type="radio" id="kob" name="plec" value="kob">
+  <label for="css">Kobieta</label><br>
+  <label for="prawko">Czy posiadasz prawo jazdy?</label>
+  <input type="checkbox" id="prawko" name="prawko" value="prawko">
+  <label for="prawko"> Tak, posiadam</label><br>
+	<label for="wojewodztwo">Wybierz swoje województwo:</label>
+  <select name="wojewodztwo" id="wojewodztwo">
+  <option value="dolnoslaskie">dolnośląskie</option>
+  <option value="kujawskopomorskie">kujawsko-pomorskie</option>
+  <option value="lubelskie">lubelskie</option>
+  <option value="łodzkie">łódzkie</option>
+	<option value="malopolskie">małopolskie</option>
+	<option value="mazowieckie">mazowieckie</option>
+	<option value="opolskie">opolskie</option>
+	<option value="podkarpackie">podkarpackie</option>
+	<option value="podlaskie">podlaskie</option>
+	<option value="slaskie">śląskie</option>
+	<option value="swietokrzyskie">świetokrzyskie</option>
+	<option value="warminskomazurskie">warmińsko-mazurskie</option>
+	<option value="wielkopolskie">wielkopolskie</option>
+	<option value="zachodniopomorskie">zachodniopomorskie</option>
+  </select>
+  <br>
+  <label for="uwagi">Uwagi:</label>
+  <input type="text" id="uwagi" name="uwagi"><br>
+   <label for="dataur">Data urodzenia:</label>
+  <input type="date" id="dataur" name="dataur"><br>
+   <label for="telefon">Numer telefonu:</label>
+  <input type="number" id="telefon" name="telefon" onKeyPress="if(this.value.length==9) return false;"required><br>
+  <label for="pesel">Pesel:</label>
+  <input type="number" id="pesel" name="pesel" onKeyPress="if(this.value.length==11) return false;"required><br>
+  <label for="kod">Kod pocztowy:</label>
+  <input type="text" id="kod"  name="kod" onKeyPress="if(this.value.length==6) return false;"required><br>
+  <input type="button" value="Submit" onclick="walidacja()">
+</form>
+<p id="ansp"></p>
+</div>
+
+</body>
+<script src="formularz.js"></script>
+>>>>>>>> 6b8b0b6dd78590fac1677e3013b1d5b85b79924a:formularz.html
 </HTML>
