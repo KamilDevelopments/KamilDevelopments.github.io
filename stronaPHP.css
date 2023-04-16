@@ -1,0 +1,11 @@
+#main>* {
+    margin: auto;
+}
+#main{
+	margin: auto;
+	width: 50%;	
+	padding-left:10px;
+	display: table;
+    text-align: left;
+    float:left;
+}

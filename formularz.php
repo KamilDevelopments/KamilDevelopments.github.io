@@ -2,9 +2,7 @@
   <head>
 <link rel="stylesheet" type="text/css" href="formularz.css" />
 <meta charset="UTF-8">
-
 </head>
-
 <body>
 <?php
 session_start();
@@ -12,9 +10,16 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
   header('Location: login.php');
   exit;
 }
+if(isset($_POST['wyloguj'])){
+  session_destroy();
+  header('Location: login.php');
+  exit();
+}
 
 ?>
-<p text-align=left><a href="https://kamildevelopments.github.io/">Powrót</a></p>
+<form id="wylogujForm" method="POST" action="formularz.php">
+        <input type="submit" name="wyloguj" value="Wyloguj">
+      </form>
 <div id="main">
 <form id="formularz" action="stronaPHP.php" method="POST">
  <label for="imie">Imię:</label>

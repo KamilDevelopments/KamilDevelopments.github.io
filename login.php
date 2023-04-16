@@ -22,7 +22,7 @@
  }
 ?>
 <body>
-<p text-align=left><a href="https://kamildevelopments.github.io/">Powrót</a></p>
+<p text-align=left><a href="index.html">Powrót</a></p>
 
 <div id="main" >
 <form id="myForm" method="POST" action="login.php">
@@ -34,23 +34,3 @@
 </div>
 </body>
 </html>
-
-CSS:
-
-input {
-	margin-top:3px;
-	margin-bottom:3px;
-	display:inline-block;
-	padding: 5px 5px;
-	
-
-}
-#main>* {
-    margin: auto;
-}
-#main{
-	margin: auto;
-	padding-left:10px;
-	display: table;
-    text-align: right;
-}

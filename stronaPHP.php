@@ -1,23 +1,43 @@
 <HTML>
   <head>
   <link rel="stylesheet" type="text/css" href="stronaPHP.css" />
-  
+
   </head>
 <body>
-<p text-align=left><a href="https://kamildevelopments.github.io/">Powrót</a></p>
-
 <div id="main">
-<p id="imie">Imię:</p>
-<p id="imie">Nazwisko:</p>
-<p id="imie">Adres:</p>
-<p id="imie">Płeć:</p>
-<p id="imie">Czy posiada prawo jazdy:</p>
-<p id="imie">Województwo</p>
-<p id="imie">Data urodzenia:</p>
-<p id="imie">Telefon:</p>
-<p id="imie">Pesel:</p>
-<p id="imie">Kod pocztowy:</p>
-<p id="Uwagi">Uwagi:</p>
+<form id="wylogujForm" method="POST" action="formularz.php">
+        <input type="submit" name="wyloguj" value="Wyloguj">
+      </form></br>
+<?php
+session_start();
+if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+    header('Location: login.php');
+    exit;
+
+	if(isset($_POST['wyloguj'])){
+		session_destroy();
+		header('Location: login.php');
+		exit();
+	  }
+}
+		if($_POST) {
+			echo "<p>Imię: " . $_POST['imie'] . "</p>";
+			echo "<p>Nazwisko: " . $_POST['Nazwisko'] . "</p>";
+			echo "<p>Ulica: " . $_POST['Ulica'] . "</p>";
+			echo "<p>Numer domu: " . $_POST['nrdom'] . "</p>";
+			echo "<p>Numer mieszkania: " . $_POST['nrmiesk'] . "</p>";
+			echo "<p>Miasto: " . $_POST['miasto'] . "</p>";
+			echo "<p>Płeć: " . $_POST['plec'] . "</p>";
+			echo "<p>Prawo jazdy: " . (isset($_POST['prawko']) ? "Tak, posiada" : "Nie posiada") . "</p>";
+			echo "<p>Województwo: " . $_POST['wojewodztwo'] . "</p>";
+			echo "<p>Uwagi: " . $_POST['uwagi'] . "</p>";
+			echo "<p>Data urodzenia: " . $_POST['dataur'] . "</p>";
+			echo "<p>Numer telefonu: " . $_POST['telefon'] . "</p>";
+			echo "<p>Pesel: " . $_POST['pesel'] . "</p>";
+			echo "<p>Kod pocztowy: " . $_POST['kod'] . "</p>";
+		}
+	?>
+
 </div>
 
 
